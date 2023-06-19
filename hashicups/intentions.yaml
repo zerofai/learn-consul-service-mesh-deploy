@@ -2,6 +2,7 @@ apiVersion: consul.hashicorp.com/v1alpha1
 kind: ServiceIntentions
 metadata:
   name: public-api
+  namespace: hashicups
 spec:
   sources:
     - name: frontend
@@ -15,6 +16,7 @@ apiVersion: consul.hashicorp.com/v1alpha1
 kind: ServiceIntentions
 metadata:
   name: products-api
+  namespace: hashicups
 spec:
   sources:
     - name: public-api
@@ -26,6 +28,7 @@ apiVersion: consul.hashicorp.com/v1alpha1
 kind: ServiceIntentions
 metadata:
   name: payments
+  namespace: hashicups
 spec:
   sources:
     - name: public-api
@@ -37,6 +40,7 @@ apiVersion: consul.hashicorp.com/v1alpha1
 kind: ServiceIntentions
 metadata:
   name: postgres
+  namespace: hashicups
 spec:
   sources:
     - name: products-api
@@ -48,6 +52,7 @@ apiVersion: consul.hashicorp.com/v1alpha1
 kind: ServiceIntentions
 metadata:
   name: frontend
+  namespace: hashicups
 spec:
   sources:
     - name: nginx
@@ -59,6 +64,7 @@ apiVersion: consul.hashicorp.com/v1alpha1
 kind: ServiceIntentions
 metadata:
   name: deny-all
+  namespace: hashicups
 spec:
   destination:
     name: '*'
