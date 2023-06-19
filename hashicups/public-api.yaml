@@ -17,6 +17,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: public-api
+  namespace: hashicups
 automountServiceAccountToken: true
 ---
 apiVersion: consul.hashicorp.com/v1alpha1
